@@ -22,6 +22,8 @@ nav { position: sticky; top: 0; z-index: 100; display: flex; justify-content: sp
 .nav-links { display: flex; gap: 2rem; list-style: none; }
 .nav-links a { font-size: 13px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
 .nav-links a:hover { color: var(--navy); }
+.nav-links a.nav-highlight { color: var(--cyan); font-weight: 500; }
+.nav-links a.nav-highlight:hover { color: var(--navy-light); }
 .nav-cta { background: var(--navy); color: white; border: none; padding: 9px 20px; border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer; text-decoration: none; }
 .nav-cta:hover { background: var(--navy-light); }
 .hero { background: var(--dark); padding: 5rem 2rem 0; text-align: center; position: relative; overflow: hidden; }
@@ -50,6 +52,8 @@ nav { position: sticky; top: 0; z-index: 100; display: flex; justify-content: sp
 .service-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
 .service-card p { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
 .service-price { font-size: 12px; color: var(--cyan); font-weight: 600; padding-top: 0.75rem; border-top: 1px solid var(--border); }
+.service-card .card-link { display: inline-block; margin-top: 0.75rem; font-size: 12px; color: var(--cyan); font-weight: 600; text-decoration: none; }
+.service-card .card-link:hover { text-decoration: underline; }
 .platform-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 2rem; }
 .platform-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
 .platform-features { display: flex; flex-direction: column; gap: 1rem; }
@@ -86,6 +90,41 @@ nav { position: sticky; top: 0; z-index: 100; display: flex; justify-content: sp
 .region-dot { width: 6px; height: 6px; border-radius: 50%; background: #4ade80; flex-shrink: 0; }
 .region-name { font-size: 12px; color: #94b8d4; font-weight: 500; }
 .region-note { font-size: 10px; color: #3a5a7a; margin-top: 1px; }
+
+/* ── INTELLIGENCE BANNER ── */
+.intel-banner {
+  background: var(--dark);
+  border-top: 1px solid #1a3a5c;
+  border-bottom: 1px solid #1a3a5c;
+  padding: 3rem 2rem;
+}
+.intel-banner-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 2rem; align-items: center;
+}
+.intel-banner h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(18px, 2.5vw, 24px); font-weight: 600;
+  color: white; margin-bottom: 0.5rem;
+}
+.intel-banner p { font-size: 13px; color: #5a7a99; line-height: 1.7; max-width: 560px; }
+.intel-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1rem; }
+.intel-tag {
+  font-size: 10px; font-weight: 600; letter-spacing: 1.5px;
+  padding: 4px 10px; border-radius: 4px;
+  border: 1px solid rgba(0,180,216,0.3);
+  color: var(--cyan); background: rgba(0,180,216,0.08);
+}
+.btn-intel {
+  background: transparent; color: var(--cyan);
+  border: 1px solid var(--cyan); padding: 13px 28px;
+  border-radius: 6px; font-size: 14px; font-weight: 500;
+  cursor: pointer; text-decoration: none; white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-intel:hover { background: var(--cyan); color: var(--dark); }
+
 .cta-section { background: var(--navy); padding: 4rem 2rem; text-align: center; }
 .cta-section h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 3vw, 28px); font-weight: 600; color: white; margin-bottom: 0.75rem; }
 .cta-section p { font-size: 14px; color: #94b8d4; margin-bottom: 2rem; max-width: 480px; margin-left: auto; margin-right: auto; }
@@ -110,6 +149,7 @@ footer p { font-size: 11px; color: #3a5a7a; }
   .hero { padding: 3rem 1.25rem 0; }
   .services-section, .about-section { padding: 2.5rem 1.25rem; }
   footer { flex-direction: column; text-align: center; }
+  .intel-banner-inner { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -123,6 +163,7 @@ footer p { font-size: 11px; color: #3a5a7a; }
   <ul class="nav-links">
     <li><a href="#platform">Platform</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="intelligence.html" class="nav-highlight">Intelligence</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -219,6 +260,26 @@ footer p { font-size: 11px; color: #3a5a7a; }
   </div>
 </section>
 
+<!-- INTELLIGENCE CAPABILITIES BANNER -->
+<section class="intel-banner">
+  <div class="intel-banner-inner">
+    <div>
+      <div class="section-eyebrow">Intelligence Capabilities</div>
+      <h2>Multi-source intelligence fusion — explained</h2>
+      <p>NA.YADRA draws on six intelligence disciplines to build a picture no single sensor can provide. Read how SOCMINT, IMINT, CULTINT and open-source analysis combine into a single Pacific maritime intelligence picture.</p>
+      <div class="intel-tags">
+        <span class="intel-tag">OSINT</span>
+        <span class="intel-tag">SOCMINT</span>
+        <span class="intel-tag">IMINT</span>
+        <span class="intel-tag">CULTINT</span>
+        <span class="intel-tag">SIGINT-ADJ</span>
+        <span class="intel-tag">HUMINT</span>
+      </div>
+    </div>
+    <a href="intelligence.html" class="btn-intel">Read the articles →</a>
+  </div>
+</section>
+
 <section class="about-section" id="about">
   <div class="about-grid">
     <div>
@@ -283,6 +344,7 @@ footer p { font-size: 11px; color: #3a5a7a; }
   <div class="footer-links">
     <a href="#platform">Platform</a>
     <a href="#services">Services</a>
+    <a href="intelligence.html">Intelligence</a>
     <a href="#about">About</a>
     <a href="mailto:Warrior8272@proton.me">Contact</a>
   </div>
