@@ -377,6 +377,42 @@
     <div class="article-footer">NA.YADRA · Watching · Analysing · Protecting · Safer Oceans · Secure Pacific · Stronger Together</div>
   </article>
 
+
+  <article class="article-block" id="oceanint">
+    <div class="article-meta">Intelligence Discipline · 07 · OCEANINT</div>
+    <h2>Reverse Drift Modelling — Tracing Objects Backwards Across the Ocean</h2>
+    <div class="byline">By NA.YADRA Pacific Maritime Intelligence Platform</div>
+
+    <h3>What is Reverse Drift Modelling?</h3>
+    <p>When an object washes ashore on a Pacific coastline — a drifting buoy, debris from a vessel, or contraband jettisoned at sea — the first question an enforcement agency asks is the hardest one: <strong>where did it come from?</strong> Reverse drift modelling is the discipline of answering that question honestly, using ocean physics, and being explicit about what the answer can and cannot say.</p>
+
+    <h3>How It Works</h3>
+    <p>The ocean moves in measurable ways. Satellite-derived and model-assimilated datasets — such as the E.U. Copernicus Marine Service’s global ocean physics products — provide daily estimates of surface currents across the Pacific at roughly nine-kilometre resolution. NA.YADRA uses these datasets to drive <strong>ensemble particle simulations</strong>: instead of tracing a single guessed path, we release thousands of virtual particles at a verified location and run the physics backwards in time. Each particle takes a slightly different path, reflecting genuine uncertainty in the ocean state. The result is not a single line on a map, but a <strong>probability envelope</strong> — a region of ocean where the object plausibly was, seven, fourteen, or thirty days before it was found.</p>
+
+    <p>The modelling is built on OpenDrift, an open-source trajectory framework developed by the Norwegian Meteorological Institute and used by search-and-rescue and oil-spill agencies worldwide. The same physics that predicts where a life raft will drift forward in time can be inverted to estimate where a recovered object began.</p>
+
+    <div class="pull-quote">An honest error bar is worth more than a confident guess.</div>
+
+    <h3>The Discipline That Makes It Intelligence</h3>
+    <p>A drift model will always produce an output. The difference between a picture and an intelligence product is the discipline wrapped around it. Every NA.YADRA drift assessment carries three structural safeguards.</p>
+
+    <p><strong>Hypothesis-conditional framing.</strong> Drift modelling can only address one origin hypothesis — that the object arrived by open-water drift. It cannot distinguish a long ocean journey from an object placed in the water nearby, or one that never drifted at all. Our assessments state every live hypothesis up front and mark clearly which ones the model can and cannot inform. A finding is always expressed as <strong>“if the object drifted, then this envelope”</strong> — never as an unconditional origin claim.</p>
+
+    <p><strong>Coordinate verification gates.</strong> Every seed position — the starting point of a simulation — must pass an automated verification gate before any run executes, checking coordinates against known geographic reference points. The Pacific straddles the 180° meridian, where longitude conventions have quietly ruined more than one analysis; our gates exist because we treat coordinate error as an operational certainty to be engineered against, not a rare mistake.</p>
+
+    <p><strong>Formal limitation statements.</strong> Every product states, in plain language, what the model did not resolve: reef-enclosed waters below the resolution of ocean forcing, tidal effects at passages, wind leeway when it is not modelled, and the growth of uncertainty as the simulation window deepens. An envelope thirty days back is broad context; an envelope seven days back may be operationally useful. Our reports weight them accordingly, and say so.</p>
+
+    <h3>A Worked Illustration</h3>
+    <p>Consider a hypothetical: a drifting object is recovered on the shore of an outer Fijian island. An ensemble of several thousand virtual particles is seeded at the recovery coastline, timed across the plausible arrival window, and integrated backwards for thirty days against Copernicus daily surface currents. Seven days back, the ensemble may concentrate in a coherent area a few tens of kilometres across — tight enough to compare against vessel traffic records for the same window. Thirty days back, the same ensemble may span well over a hundred kilometres — still useful for ruling corridors in or out, but no longer a localisation. Where multiple recovery events exist, their envelopes can be compared at matched times to assess whether a shared origin is plausible or excluded. Every one of those statements comes with its uncertainty attached.</p>
+
+    <h3>Where This Fits</h3>
+    <p>Reverse drift modelling is one layer of the NA.YADRA platform, alongside live AIS monitoring, dark-vessel detection, satellite imagery analysis, and behavioural analytics. Its outputs are intelligence leads: they inform where to look, which hypotheses to prioritise, and which records to cross-reference. They are never presented as evidence, and every product requires human analyst validation before any operational use — a principle stated on every page we produce.</p>
+
+    <p>NA.YADRA drift modelling uses E.U. Copernicus Marine Service Information and the OpenDrift framework (Norwegian Meteorological Institute). The illustration above is hypothetical; NA.YADRA does not publish operational casework.</p>
+
+    <div class="article-footer">NA.YADRA · Watching · Analysing · Protecting · Safer Oceans · Secure Pacific · Stronger Together</div>
+  </article>
+
   <!-- COMING SOON TEASERS -->
   <div class="section-label" style="margin-top:1rem;">Coming Next</div>
   <div class="teaser-grid">
